@@ -6,13 +6,13 @@
   set j, 0
   set b, 0xf100
 :nextchar
-     set a, (data+i)
+     set a, [data+i]
      ife a, 0
         set PC, end
      ifg a, 0xff
         set PC, setcolor
      bor a, b
-     set (0x8000+j), a
+     set [0x8000+j], a
      add i, 1
      add j, 1
      set PC, nextchar
