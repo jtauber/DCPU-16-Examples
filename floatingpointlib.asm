@@ -22,7 +22,7 @@ SET PC, test
 	:loop
 	ADD I, 0x1
 	SHL A, 0x1
-	IFN 0x1, O
+	IFN O, 0x1
 		SET PC, loop
 	SHR A, I
 	
